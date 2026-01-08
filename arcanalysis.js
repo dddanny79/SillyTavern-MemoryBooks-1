@@ -455,6 +455,12 @@ export async function runArcAnalysisSequential(
   } = options;
   const extra = options?.extra ?? {};
 
+  // Set reasonable max_tokens for Arc Analysis if not already set
+  // Arc responses are typically large (JSON with summary, keywords, etc.)
+  if (!extra.max_tokens && !extra.max_completion_tokens) {
+    extra.max_tokens = 4096; // Generous default for arc analysis
+  }
+
   // Determine local max passes (single-arc preset defaults to one pass unless explicitly overridden)
   const singleArcPreset = presetKey === "arc_alternate";
   const maxPassesLocal = Object.prototype.hasOwnProperty.call(
