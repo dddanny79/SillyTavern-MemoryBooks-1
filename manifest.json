@@ -6,9 +6,9 @@
     "js": "index.js",
     "css": "style.css",
     "author": "aikohanasaki",
-    "version": "4.14.5-dev-TEST-CACHE-BUG",
+    "version": "4.14.5-dev",
     "license": "AGPL-3.0",
-    "homePage": "https://github.com/aikohanasaki/SillyTavern-MemoryBooks",
+    "homePage": "https://github.com/dddanny79/SillyTavern-MemoryBooks",
     "auto_update": true,
     "description": "Creates and saves chat memories to SillyTavern lorebooks with keywords and numbered titles. Localization ongoing in multiple languages."
 }
