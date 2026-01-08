@@ -3444,6 +3444,7 @@ async function showArcConsolidationPopup() {
     content += `<label>${escapeHtml(translate("Number of automatic arc attempts", "STMemoryBooks_Arc_MaxPasses"))} <input id="stmb-arc-maxpasses" type="number" min="1" max="50" value="10" class="text_pole" style="width:100px"/></label>`;
     content += `<label>${escapeHtml(translate("Minimum number of memories in each arc", "STMemoryBooks_Arc_MinAssigned"))} <input id="stmb-arc-minassigned" type="number" min="1" max="12" value="2" class="text_pole" style="width:110px"/></label>`;
     content += `<label>${escapeHtml(translate("Token Budget", "STMemoryBooks_Arc_TokenBudget"))} <input id="stmb-arc-token" type="number" min="1000" max="100000" value="${tokenThreshold}" class="text_pole" style="width:120px"/></label>`;
+    content += `<label>${escapeHtml(translate("Max Response Tokens", "STMemoryBooks_Arc_MaxResponseTokens"))} <input id="stmb-arc-max-tokens" type="number" min="1024" max="32000" value="8192" class="text_pole" style="width:120px"/></label>`;
     content += "</div>";
 
     // Disable originals toggle
@@ -3619,6 +3620,12 @@ async function showArcConsolidationPopup() {
         1000,
         readIntInput(dlg.querySelector("#stmb-arc-token"), tokenThreshold),
       ),
+      extra: {
+        max_tokens: Math.max(
+          1024,
+          readIntInput(dlg.querySelector("#stmb-arc-max-tokens"), 8192),
+        ),
+      },
     };
     const disableOriginals = !!dlg.querySelector("#stmb-arc-disable-originals")
       ?.checked;

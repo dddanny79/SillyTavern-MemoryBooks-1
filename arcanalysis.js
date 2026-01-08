@@ -455,10 +455,11 @@ export async function runArcAnalysisSequential(
   } = options;
   const extra = options?.extra ?? {};
 
-  // Set reasonable max_tokens for Arc Analysis if not already set
+  // Set default max_tokens for Arc Analysis if not already set
   // Arc responses are typically large (JSON with summary, keywords, etc.)
+  // Default can be overridden via UI "Max Response Tokens" field
   if (!extra.max_tokens && !extra.max_completion_tokens) {
-    extra.max_tokens = 4096; // Generous default for arc analysis
+    extra.max_tokens = 8192;
   }
 
   // Determine local max passes (single-arc preset defaults to one pass unless explicitly overridden)
