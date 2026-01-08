@@ -2,6 +2,11 @@
 
 **← [Back to README](readme.md)**
 
+## v4.14.5-dev (January 8, 2026)
+- **Bugfix:** Fixed German/French localization system not loading translations
+- **Bugfix:** Fixed Arc custom prompts being ignored (always used English default)
+- **Bugfix:** Fixed Arc Analysis 504 timeout by adding default max_tokens (4096)
+
 ## v4.14.4 (January 6, 2026)
 - Add missing translations for arcs
 
