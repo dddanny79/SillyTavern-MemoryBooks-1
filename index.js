@@ -3438,11 +3438,15 @@ async function showArcConsolidationPopup() {
     }
     content += `</select></label> <button id="stmb-arc-rebuild-builtins" class="menu_button whitespacenowrap">${escapeHtml(translate("Rebuild from built-ins", "STMemoryBooks_Arc_RebuildBuiltins"))}</button></div>`;
 
-    // Options row
+    // Options row 1
     content += '<div class="flex-container flexGap10">';
     content += `<label>${escapeHtml(translate("Maximum number of memories to process in each pass", "STMemoryBooks_Arc_MaxPerPass"))} <input id="stmb-arc-maxpass" type="number" min="1" max="50" value="12" class="text_pole" style="width:80px"/></label>`;
     content += `<label>${escapeHtml(translate("Number of automatic arc attempts", "STMemoryBooks_Arc_MaxPasses"))} <input id="stmb-arc-maxpasses" type="number" min="1" max="50" value="10" class="text_pole" style="width:100px"/></label>`;
     content += `<label>${escapeHtml(translate("Minimum number of memories in each arc", "STMemoryBooks_Arc_MinAssigned"))} <input id="stmb-arc-minassigned" type="number" min="1" max="12" value="2" class="text_pole" style="width:110px"/></label>`;
+    content += "</div>";
+
+    // Options row 2 - Token settings
+    content += '<div class="flex-container flexGap10">';
     content += `<label>${escapeHtml(translate("Token Budget", "STMemoryBooks_Arc_TokenBudget"))} <input id="stmb-arc-token" type="number" min="1000" max="100000" value="${tokenThreshold}" class="text_pole" style="width:120px"/></label>`;
     content += `<label>${escapeHtml(translate("Max Response Tokens", "STMemoryBooks_Arc_MaxResponseTokens"))} <input id="stmb-arc-max-tokens" type="number" min="1024" max="32000" value="8192" class="text_pole" style="width:120px"/></label>`;
     content += "</div>";
