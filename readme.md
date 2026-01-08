@@ -403,6 +403,17 @@ No. If there are no other world info or lorebooks, selecting 'Delay until recurs
 - **Blocked:** Only Unicode control characters (U+0000–U+001F, U+007F–U+009F) are blocked; these are removed automatically.
 
 See [Character Policy Details](charset.md) for examples and migration notes.
+
+---
+
+## 🤝 Contributors
+
+**Original Author:**
+- **aikohanasaki** - Core development, architecture, and ongoing maintenance
+
+**Bug Fixes & Improvements:**
+- **dddanny79** - Fixed German/French localization system bug, Arc custom prompt bug, Arc Analysis timeout issue (max_tokens)
+
 ---
 
 *Developed with love using VS Code/Cline, extensive testing, and community feedback.* 🤖💕
